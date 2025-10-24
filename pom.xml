@@ -26,10 +26,10 @@
 		<developer/>
 	</developers>
 	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
+		<connection>scm:git:https://github.com/reobest/sfg-pet-clinic.git</connection>
+		<developerConnection>scm:git:https://github.com/reobest/sfg-pet-clinic.git</developerConnection>
+		<url>https://github.com/reobest/sfg-pet-clinic</url>
+		<tag>HEAD</tag>
 	</scm>
 	<properties>
 		<java.version>21</java.version>
@@ -71,6 +71,15 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<tagNameFormat>@{project.artifactId}-@{project.version}</tagNameFormat>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<scmCommentPrefix>[release] </scmCommentPrefix>
 				</configuration>
 			</plugin>
 		</plugins>
